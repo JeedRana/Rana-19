@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  
+  <title>Contacts</title>
+  
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+    }
+
+    #root {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+
+    .form-container {
+      max-width: 600px;
+      width: 100%;
+      padding: 20px;
+      border: 2px solid #ccc; /* Add border */
+      border-radius: 10px; /* Rounded border */
+      background-color: #f9f9f9; /* Background color */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Box shadow */
+    }
+
+    .form-container form {
+      position: relative; /* Changed position to relative */
+    }
+  </style>
+  
+</head>
+<body>
+    <div class="flex py-4 px-8 items-center justify-between gap-2">
+        <div class="flex w-1/6 lg:w-1/2 gap-5">
+            <i class="fa-solid fa-bars text-2xl"></i>
+            <div class="hidden lg:flex items-center gap-5">
+                <a href="index.html" class="hover:text-blue-500">Home</a>
+                <a href="product.html" class="hover:text-blue-500">Product</a>
+                <a href="category.html" class="hover:text-blue-500">Category</a>
+                <a href="contacts.html" class="hover:text-blue-500">Contacts</a>   
+            </div>
+        </div>   
+      </div>
+    </div>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  
+<div id="root">
+<div class="form-container">
+  <form action="submit_contact_form.php" method="POST">
+    <div class="mb-4">
+      <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Enter Your Name:</label>
+      <input type="text" id="name" name="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+    </div>
+    <div class="mb-4">
+      <label for="subject" class="block text-gray-700 text-sm font-bold mb-2">Subject:</label>
+      <input type="text" id="subject" name="subject" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+    </div>
+    <div class="mb-4">
+      <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Message:</label>
+      <textarea id="message" name="message" rows="4" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+    </div>
+    <div class="mb-4">
+      <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Enter Your Email:</label>
+      <input type="email" id="email" name="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+    </div>
+    <div>
+      <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Submit</button>
+    </div>
+  </form>
+</div>
+</div>
+</body>
+</html>
